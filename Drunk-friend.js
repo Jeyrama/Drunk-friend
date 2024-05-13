@@ -28,3 +28,5 @@ function decode(str) {
   }
   return output;
 }
+
+// or
