@@ -30,3 +30,15 @@ function decode(str) {
 }
 
 // or
+
+function decode(str) {
+  if (typeof str !== 'string'){return 'Input is not a string'};
+
+  let abc = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
+  let cba = 'zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA';
+  let res = ''
+  for(let i = 0; i < str.length; i++){
+    res+=  cba.indexOf(str[i]) !== -1 ? abc[cba.indexOf(str[i])] : str[i]
+  }
+  return res 
+  }
