@@ -13,3 +13,6 @@ can be part of the input, and you should keep them like they are.
 You should also test if the input is a string. 
 If it is not, return "Input is not a string".
 */
+
+
+// Solution
