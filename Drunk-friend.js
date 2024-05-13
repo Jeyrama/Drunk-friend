@@ -16,3 +16,15 @@ If it is not, return "Input is not a string".
 
 
 // Solution
+
+function decode(str) {
+  if (typeof(str) != 'string') { return "Input is not a string"; }
+  let char, i, output = '';
+  for (i = 0; i < str.length; i++) {
+    char = str[i];
+    if      (char.match(/[a-z]/)) { output += String.fromCharCode(219 - char.charCodeAt(0)); }
+    else if (char.match(/[A-Z]/)) { output += String.fromCharCode(155 - char.charCodeAt(0)); }
+    else                          { output += char; }
+  }
+  return output;
+}
